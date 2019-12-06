@@ -2,6 +2,7 @@ package br.com.fundatec.carro.api;
 
 import javax.validation.constraints.*;
 import java.time.LocalDate;
+import java.util.List;
 
 public class CarroImputDto {
     @NotBlank(message = "campo é obrigatório")
@@ -56,6 +57,5 @@ public class CarroImputDto {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-
 
 }
