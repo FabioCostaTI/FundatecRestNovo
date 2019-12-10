@@ -1,7 +1,7 @@
 package br.com.fundatec.carro.mapper;
 
-import br.com.fundatec.carro.api.CarroImputDto;
-import br.com.fundatec.carro.api.CarroOutputDto;
+import br.com.fundatec.carro.api.dto.CarroImputDto;
+import br.com.fundatec.carro.api.dto.CarroOutputDto;
 import br.com.fundatec.carro.model.Carro;
 import org.springframework.stereotype.Component;
 

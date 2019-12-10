@@ -2,11 +2,10 @@ package br.com.fundatec.carro.model;
 
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
+
 @Entity
 public class Carro {
 
@@ -18,6 +17,8 @@ public class Carro {
     private LocalDate dataFabricacao;
     private LocalDate dataModelo;
     private String marca;
+    @OneToMany(mappedBy = "carro")
+    private Set<Reserva> reservas;
 
     public String getMarca() {
         return marca;
@@ -77,4 +78,12 @@ public class Carro {
     }
 
     public Carro(String marca) { this.marca = marca; }
+
+    public Set<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(Set<Reserva> reservas) {
+        this.reservas = reservas;
+    }
 }
